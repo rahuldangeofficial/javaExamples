@@ -1,0 +1,44 @@
+/*
+    here box uses a parameterized constructor to initialize the dimensions of a box.
+*/
+
+
+class BoxDemo7{
+    public static void main(String args[]){
+        //declare , allocate and initialize box objects
+        Box mybox1=new Box(10,20,15);
+        Box mybox2=new Box(3,6,9);
+        
+        double vol;
+        
+        //get volume of first box
+        vol = mybox1.volume();
+        System.out.println("Volume is "+vol);
+        
+        //get volume of the second box
+        vol = mybox2.volume();
+        System.out.println("Volume is "+vol);
+        
+    }
+}
+class Box{
+    double width;
+    double height;
+    double depth;
+    
+    //this is the constructor for Box.
+    Box(double w,double h,double d){
+        double width;
+        
+        
+        this.width=w;
+        height=h;
+        depth=d;
+    }
+    
+    //compute and return volume
+    double volume(){
+        return width*height*depth;
+    }
+
+}
